@@ -9,6 +9,64 @@ class v2 {
 			this->y = y;
 		};
 
+		v2<T>& operator=(v2<T> const& v) {
+			this->x = v.x;
+			this->y = v.y;
+			return *this;
+		};
+
+
+		v2<T> operator+(T n) {
+			return v2(
+				this->x + n, 
+				this->y + n);
+		};
+
+		v2<T> operator+=(T n) {
+			this->x += n;
+			this->y += n;
+			return *this;
+		};
+
+		v2<T> operator-(T n) {
+			return v2(
+				this->x - n,
+				this->y - n);
+		};
+
+		v2<T> operator-=(T n) {
+			this->x -= n;
+			this->y -= n;
+			return *this;
+		};
+		
+		v2<T> operator*(T n) {
+			return v2(
+				this->x * n,
+				this->y * n);
+		};
+
+		v2<T> operator*=(T n) {
+			this->x *= n;
+			this->y *= n;
+			return *this;
+		};
+
+		v2<T> operator/(T n) {
+			return v2(
+				this->x / n,
+				this->y / n);
+		};
+
+		v2<T> operator/=(T n) {
+			this->x /= n;
+			this->y /= n;
+			return *this;
+		}
+
+		 
+
+
 	T x, y;
 };
 
