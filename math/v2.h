@@ -16,53 +16,72 @@ class v2 {
 		};
 
 
-		v2<T> operator+(T n) {
+		v2<T> operator+(T const& n) {
 			return v2(
 				this->x + n, 
 				this->y + n);
 		};
-
-		v2<T> operator+=(T n) {
+		v2<T> operator+(v2<T> const& v) {
+			return v2(
+				this->x + v.x,
+				this->y + v.y);
+		};
+		v2<T> operator+=(T const& n) {
 			this->x += n;
 			this->y += n;
 			return *this;
 		};
+		v2<T> operator+=(v2<T> const& v) {
+			this->x += v.x;
+			this->y += v.y;
+			return *this;
+		}
 
-		v2<T> operator-(T n) {
+
+		v2<T> operator-(T const& n) {
 			return v2(
 				this->x - n,
 				this->y - n);
 		};
-
-		v2<T> operator-=(T n) {
+		v2<T> operator-(v2<T> const& v) {
+			return v2(
+				this->x - v.x,
+				this->y - v.y);
+		};
+		v2<T> operator-=(T const& n) {
 			this->x -= n;
 			this->y -= n;
 			return *this;
 		};
+		v2<T> operator-=(v2<T> const& v) {
+			this->x -= v.x;
+			this->y -= v.y;
+			return *this;
+		};
+
 		
-		v2<T> operator*(T n) {
+		v2<T> operator*(T const& n) {
 			return v2(
 				this->x * n,
 				this->y * n);
 		};
-
-		v2<T> operator*=(T n) {
+		v2<T> operator*=(T const& n) {
 			this->x *= n;
 			this->y *= n;
 			return *this;
 		};
 
-		v2<T> operator/(T n) {
+
+		v2<T> operator/(T const& n) {
 			return v2(
 				this->x / n,
 				this->y / n);
 		};
-
-		v2<T> operator/=(T n) {
+		v2<T> operator/=(T const& n) {
 			this->x /= n;
 			this->y /= n;
 			return *this;
-		}
+		};
 
 		 
 
