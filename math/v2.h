@@ -9,13 +9,14 @@ class v2 {
 			this->y = y;
 		};
 
+		// Assignment
 		v2<T>& operator=(v2<T> const& v) {
 			this->x = v.x;
 			this->y = v.y;
 			return *this;
 		};
 
-
+		// Scalar and vector addition and subtraction
 		v2<T> operator+(T const& n) {
 			return v2(
 				this->x + n, 
@@ -59,7 +60,7 @@ class v2 {
 			return *this;
 		};
 
-		
+		// Scalar multiplication and division
 		v2<T> operator*(T const& n) {
 			return v2(
 				this->x * n,
@@ -82,6 +83,26 @@ class v2 {
 			this->y /= n;
 			return *this;
 		};
+
+		// Negation
+		v2<T> operator-() {
+			return v2(
+				-this->x,
+				-this->y);
+		};
+
+		// Increment and decrement
+		v2<T> operator++() {
+			this->x++;
+			this->y++;
+			return *this;
+		}
+
+		v2<T> operator--() {
+			this->x--;
+			this->y--;
+			return *this;
+		}
 
 		 
 
