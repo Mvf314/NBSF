@@ -1,6 +1,8 @@
 #ifndef __V2__
 #define __V2__
 
+#include <ostream>
+
 template <typename T>
 class v2 {
 	public:
@@ -96,16 +98,20 @@ class v2 {
 			this->x++;
 			this->y++;
 			return *this;
-		}
+		};
 
 		v2<T> operator--() {
 			this->x--;
 			this->y--;
 			return *this;
+		};
+
+		
+		// Printing
+		friend std::ostream& operator<<(std::ostream& os, v2<T> const v) {
+			os << v.x << " " << v.y;
+			return os;
 		}
-
-		 
-
 
 	T x, y;
 };
