@@ -118,8 +118,8 @@ public:
 	v3<T> operator-() {
 		return v3(
 			-this->x,
-			-this->y)
-			-this->z;
+			-this->y,
+			-this->z);
 	};
 
 	// Increment and decrement
@@ -147,4 +147,4 @@ public:
 	T x, y, z;
 };
 
-#endif __V3__
+#endif
