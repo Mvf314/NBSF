@@ -7,6 +7,7 @@
 
 #include "v2.h"
 #include "v3.h"
+#include "v4.h"
 
 class vec {
 	public:
@@ -19,6 +20,10 @@ class vec {
 		static T length(v3<T> v) {
 			return sqrt(pow(v.x, 2) + pow(v.y, 2) + pow(v.z, 2));
 		};
+		template<typename T>
+		static T length(v4<T> v) {
+			return sqrt(pow(v.x, 2) + pow(v.y, 2) + pow(v.z, 2) + pow(v.w, 2));
+		};
 		// Unit vector
 		template<typename T>
 		static v2<T> normalize(v2<T> v) {
@@ -26,6 +31,10 @@ class vec {
 		};
 		template<typename T>
 		static v3<T> normalize(v3<T> v) {
+			return v / length(v);
+		};
+		template<typename T>
+		static v4<T> normalize(v4<T> v) {
 			return v / length(v);
 		};
 		// Dot product
@@ -36,6 +45,10 @@ class vec {
 		template<typename T>
 		static T dot(v3<T> v, v3<T> u) {
 			return v.x * u.x + v.y * u.y + v.z * u.z;
+		};
+		template<typename T>
+		static T dot(v4<T> v, v4<T> u) {
+			return v.x * u.x + v.y * u.y + v.z * u.z + v.w * u.w;
 		};
 		// Cross product
 		template<typename T>
@@ -51,6 +64,10 @@ class vec {
 		};
 		template<typename T>
 		static double angle(v3<T> v, v3<T> u) {
+			return RAD_TO_DEG * acos(dot(v, u) / (length(v) * length(u)));
+		};
+		template<typename T>
+		static double angle(v4<T> v, v4<T> u) {
 			return RAD_TO_DEG * acos(dot(v, u) / (length(v) * length(u)));
 		};
 };
