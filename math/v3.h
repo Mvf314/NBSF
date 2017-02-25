@@ -11,7 +11,7 @@ public:
 		this->y = y;
 		this->z = z;
 	};
-	v3(v2<T> const& xy, T const& y) {
+	v3(v2<T> const& xy, T const& z) {
 		this->x = xy.x;
 		this->y = xy.y;
 		this->z = z;
