@@ -7,6 +7,8 @@
 class Window {
 public:
 	Window(int width = 1280, int height = 720, const char* title = "Window");
+	int shouldClose();
+	void swap();
 private:
 	GLFWwindow* window;
 };

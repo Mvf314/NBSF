@@ -9,3 +9,11 @@ Window::Window(int width, int height, const char* title) {
 	}
 	glfwMakeContextCurrent(window);
 }
+
+int Window::shouldClose() {
+	return glfwWindowShouldClose(window);
+}
+
+void Window::swap() {
+	glfwSwapBuffers(window);
+}

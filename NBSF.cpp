@@ -13,3 +13,7 @@ void NBSF::initGLEW() {
 		exit(-1);
 	}
 }
+
+void NBSF::clear() {
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}

@@ -7,8 +7,9 @@
 #include <iostream>
 
 class NBSF {
-	public:
-		static void initGL(GLuint versionMajor = 3, GLuint versionMinor = 3);
-		static void initGLEW();
+public:
+	static void initGL(GLuint versionMajor = 3, GLuint versionMinor = 3);
+	static void initGLEW();
+	static void clear();
 };
 #endif
