@@ -3,6 +3,8 @@
 
 #include <ostream>
 
+#include "v2.h"
+
 template<typename T>
 class v3 {
 public:
@@ -68,7 +70,7 @@ public:
 	v3<T> operator-(v3<T> const& v) {
 		return v3(
 			this->x - v.x,
-			this->y - v.y
+			this->y - v.y,
 			this->z - v.z);
 	};
 	v3<T> operator-=(T const& n) {
