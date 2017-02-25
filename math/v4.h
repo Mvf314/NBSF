@@ -16,43 +16,23 @@ public:
 		this->w = w;
 	};
 	v4(v2<T> const& xy, T const& z, T const& w) {
-		this->x = xy.x;
-		this->y = xy.y;
-		this->z = z;
-		this->w = w;
+		this(xy.x, xy.y, z, w);
 	};
 	v4(T const& x, v2<T> const& yz, T const& w) {
-		this->x = x;
-		this->y = yz.x;
-		this->z = yz.y;
-		this->w = w;
+		this(x, yz.x, yz.y, w);
 	};
 	v4(T const& x, T const& y, v2<T> const& zw) {
-		this->x = x;
-		this->y = y;
-		this->z = zw.x;
-		this->w = zw.y;
+		this(x, y, zw.x, zw.y);
 	};
 	v4(v2<T> const& xy, v2<T> const& zw) {
-		this->x = xy.x;
-		this->y = xy.y;
-		this->z = zw.x;
-		this->w = zw.y;
+		this(xy.x, xy.y, zw.x, zw.y);
 	};
 	v4(v3<T> const& xyz, T const& w) {
-		this->x = xyz.x;
-		this->y = xyz.y;
-		this->z = xyz.z;
-		this->w = w;
+		this(xyz.x, xyz.y, xyz.z, w);
 	};
 	v4(T const& x, v3<T> const& yzw) {
-		this->x = x;
-		this->y = yzw.x;
-		this->z = yzw.y;
-		this->w = yzw.z;
+		this(x, yzw.x, yzw.y, yzw.z);
 	};
-
-
 
 	// Assignment
 	v4<T>& operator=(v4<T> const& v) {

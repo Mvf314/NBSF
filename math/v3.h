@@ -14,14 +14,10 @@ public:
 		this->z = z;
 	};
 	v3(v2<T> const& xy, T const& z) {
-		this->x = xy.x;
-		this->y = xy.y;
-		this->z = z;
+		this(xy.x, xy.y, z);
 	};
 	v3(T const& x, v2<T> const& yz) {
-		this->x = x;
-		this->y = yz.y;
-		this->z = yz.z;
+		this(x, yz.x, yz.y)
 	};
 
 
